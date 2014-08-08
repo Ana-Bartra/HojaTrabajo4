@@ -1,3 +1,11 @@
+/**
+ * Algoritmos y Estructura de Datos
+ * Hoja de trabajo 4
+ * Ana Bartra 13643, Luis Orellana 13140
+ * List.java
+ * codigo tomado de libro de Clements
+ */
+
 public interface List<E> 
 {
 
