@@ -1,11 +1,11 @@
 /**
  * Algoritmos y Estructura de Datos
- * Hoja de trabajo 2
- * Isa Contreras 13154 / Luis Orellana 13140/ Erick de Mata 13648
- *Calc.java
- * 
+ * Hoja de trabajo 4
+ * Ana Bartra 13643, Luis Orellana 13140
+ * Calc3.java
+ * codigo editado de practica 2
  */
-//package calc;
+//package Cal3;
 
 
 import java.io.BufferedReader;
@@ -22,31 +22,54 @@ import java.util.Scanner;
 
 public class Calc3 {
 
+    //se crea el objeto stack
     public static Stack<String> miStack;
-    
+    //Se genera el objeto singleton 
+    public Singleton single = new Singleton();
+ 
     public static void main(String[] args) {
-
-        // TODO code application logic here
+        new Calc3();
+    }
+    
+    Calc3() {
+        
+        //Si alguna vez ya se creo un objeto calculadora 
+        if (single.SingletonCalc()) {
+            System.out.println("Ya se ha creado un objeto de tipo calculadora");
+            System.exit(0);
+        }
+        
+        //Se coloca que ya se ha creado un objeto tipo Calc3
+        single.setCalc();
+        
+        // Seleccion de tipo de estructura de datos
         System.out.println("Ingrese El numero de la implementacion a utilziar");
         System.out.println("1. ArrayList");
         System.out.println("2. Vector");
         System.out.println("3. List");
         
+        //Ingreso del usuario
         Scanner sc = new Scanner(System.in);
+        String ingreso = sc.nextLine();
         
-        if (!sc.equals("1") && !sc.equals("2")){
+        //Si no se elige arraylist ni vector
+        if (!ingreso.equals("1") && !ingreso.equals("2")){
             System.out.println("Ingrese El numero de la implementacion de lista a utilizar");
             System.out.println("1. Simplemente encadenada");
             System.out.println("2. Doblemente encadenada");
             System.out.println("3. Ciruclar"); 
             
+            //se pide el ingreso del tipo de lista que se desea trabajar
             Scanner sclist = new Scanner(System.in);
+            String ingreso2 = sclist.nextLine();
             
+            //Se crea la lista
             StackFactory<String> miStackFactory = new StackFactory<String>(); 
-            miStack = miStackFactory.getStack(sc.nextLine(),sclist.nextLine());
+            miStack = miStackFactory.getStack(ingreso,ingreso2);
         }else{
+            //Se crea el vector o array
             StackFactory<String> miStackFactory = new StackFactory<String>(); 
-            miStack = miStackFactory.getStack(sc.nextLine(), null);
+            miStack = miStackFactory.getStack(ingreso, null);
         }
         
         

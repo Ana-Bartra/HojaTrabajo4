@@ -1,12 +1,12 @@
 /**
  * Algoritmos y Estructura de Datos
- * Hoja de trabajo 2
- * Isa Contreras 13154 / Luis Orellana 13140/ Erick de Mata 13648
+ * Hoja de trabajo 4
+ * Ana Bartra 13643, Luis Orellana 13140
  * Stack.java
- * 
+ * codigo tomado de libro de Clements
  */
 //package calc;
-
+//package Cal3;
 public interface Stack<E> 
 {
 

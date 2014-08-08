@@ -1,3 +1,11 @@
+/**
+ * Algoritmos y Estructura de Datos
+ * Hoja de trabajo 4
+ * Ana Bartra 13643, Luis Orellana 13140
+ * DoubleLinkedList.java
+ * codigo tomado de libro de Clements
+ */
+//package Cal3;
 public class DoubleLinkedList<E> extends AbstractList<E>{
 protected int count;
 protected DoubleLinkedNode<E> head;
